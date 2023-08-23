@@ -1,0 +1,798 @@
+/*
+    Step 1:
+
+    Every time we use an input and a label, we need to reference each other,
+    for that we can use and id inside the input and a for property inside the label
+
+    <label for="input-1"></label>
+    <input id="input-1"></input>
+*/
+
+/*
+    Step 2: 
+
+    We can center elements providing a width: 940px
+    and a margin: 0 auto;
+*/
+
+/*
+    Step 3: Textarea
+
+    There is a tag in html input that allows us to modify its size,
+    this one is called: <textarea></textarea>
+    we can also modify its initial size (cols and rows):
+    <textarea cols=10 rows= 20></textarea>
+*/
+
+/*
+    Step 4: Complex inputs
+
+    When we work with inputs list such as: checkbox, radio,
+    we need bind those tags using the same name, otherwise, you will be able to choose,
+    more than two in the same form:
+    
+    <label for="label-1">checkbox 1</label>
+    <input id="label-1" type="checkbox" name="form-1">
+
+    <label for="label-2">checkbox 2</label>
+    <input id="label-2" type="checkbox" name="form-1">
+
+    <label for="label-3">radio 3</label>
+    <input id="label-3" type="radio" name="form-1">
+*/
+
+/* 
+    Step 5: hierarchy (jairarki) 
+    In css elements are modified according to the hierarchy, check the next example:
+
+    div form p{color:white}
+    form p{color: blue;}
+    p{color: red;}
+
+    What color is gonna be painted the p tag in?
+    1. blue
+    2. red 
+    3. white //Correct its becuase the weight of each tag is 1 x3 = 3
+
+    However, tags, classes and IDs doesn't have the same weight,
+    check the next out.
+    
+    less weight
+        tags: 1
+        class: 10
+        id=100
+        type/inline (<p style=" color: yellow"></p>) = 1000
+    greater weight
+*/
+
+/*
+    Step 6: drop list "select option"
+
+    This tag allows us to deploy many options inside one tag, 
+    this is perfect to work with many values 
+    <select>
+        <option>first option</option>
+        <option>second option</option>
+        <option>third option</option>
+    </select>
+*/
+
+/*
+    Step 7: Input types for mobile devices
+
+    Depending on the devide, some inputs need to be modified in order to offer a better,
+    user expercience, for that you and I can change the property type with different values, such as:
+    1. type="text"
+    2. type="eamil"
+    3. type="tel"
+    4. type="number"
+    5. type="password"
+    6. type="date"
+    7. type="datetime"
+    8. type="month"
+    9. type="search"
+
+    This types, stablish a type of value inside each input, and in the case the form is filled up,
+    with different values the tag will pop up an alert.
+*/
+
+/*
+    Step 8: required propery
+
+    When an input cannot be empty we can use this property, so that, when an user submits the formm,
+    the input sould containt any value other wise the tag will show an alert.
+*/
+
+/*
+    Step 9: filedset <tag>
+
+    This tag allow us to bind html tags that shares the same kind of information,
+    for instance a group of checkboxes or radios can be bound by using this tag,
+    additionally, using these tags is consider a good practice.
+    <fieldset></fieldset>
+*/
+
+/*
+    STEP 10: alt (property)
+
+    When an image used in the html document doesn't charge because of the internet connection,
+    when can use the property alt to describe its purpose.
+    <img src= "hola.jpg" alt=" image of a greeting">
+*/
+
+/*
+    STEP 11: legent <tag>
+
+    When we work with inputs or fields, we can provide them a tittle, for that we can use the tag,
+    legents, this one tells the browser that inside this tag there are a group of inputs.
+    <legend></legend>
+*/
+
+/*
+    STEP 12: transition (CSS property)
+
+    When we use hover or another stage of the tag, we can modify the time in which ocures,
+    the action or effect, for instace:
+    
+    input{
+        background:red;
+        transition: 1s background (OR WE CAN CHOOSE: transform, all);
+    }
+    input:hover{
+        background:blue; 
+    }
+
+    in consequence, the effect as result of changing between red and blue lasts 1s,
+    which smooths the changing between these colors
+
+*/
+
+/*
+    STEP 13: Pointer (CSS property)
+    We can use this property to determine the kind of pointer that appears when we move the arrow on a button.
+    crusor: pointer;
+*/
+
+/*
+    STEP 14: Transform (CSS property)
+
+    We can use this property to modify the properties of an element,
+    this can be combined with transitions, animations and anyother function,
+    that serves to animate elements:
+
+    transform: scale(1.2) rotate(70deg);
+    scale = increase the size according to a percentage
+    rotate = rotates the element according to degrees
+    Only use 1 transform property, otherwise, the browser will only read the last one.
+*/
+
+/*
+    Step 15: semantic for Tables <tag>
+    <table> = container 
+        <thead> = head of table
+            <tr> = table row
+                <th> = <td>
+        <tbody> = table body    
+            <tr> = table row (container)
+                <td> = table division (component of the container)
+        <tfoot> = table foot
+            <tr> = table row
+                <td> table division
+*/
+
+/*
+    Step 16: float (CSS property)
+
+    you can use float to stablish the position of a image that you want to placed in an specific location,
+    with this property other elements will be placed next to it by surrounding it.
+
+    img{
+        float: left;
+        float: right;
+    }
+*/
+
+/*
+    Step 17: Fonts (Css style) (Google fonts)
+    
+    Fonts helps us to improve the user experience of our website,
+    it olso enhances the design of our project, on the internet there are many companies that have designed a huge numer of fonts,
+    some of them are free and other paid; for the case we want free fonts, we can use those that are offered by Google.
+    Go to gooogle fonts, copy the link reference and paste it in your document and use it according to the specifications.
+
+*/
+
+/*
+    step 18: pseudoelements by parent and child elements (dom)
+
+    We need to use classes and Ids carefully, trying to be general and not specific, this is considered a good practice.
+    Therefore, It's important not to describe behaviors only qualities. 
+    In the same way, to avoid IDs specifications, we can use the parent's class and pseudo components,
+    this makes part of the DOM but it can be also used with CSS, check this out:
+
+    .container-parent:first-child{
+        color: red;
+        weight:bold;
+    }
+
+    There are many other seudoelements that we can use, in order to select the proper html element:
+    1. last-child = select the last child element.
+    2. nth-child() = specify the position of the child: nth-child(4) / even numers nth-child(2n) 
+*/
+
+/* 
+    Step 19 : Gradient (Css function)
+
+    Gradients allows us to style our project by smoothing two or more colors inside an html element,
+    this is helpful whether we want to have one color at the begining and another one at the end:
+
+    background-color: linear-gradient(grades, color1, color2... color n);
+    background-color: radial-gradient(color1, color2... color n);
+*/
+
+/*
+    STEP 20: Advance pseudo-elements (text modification)
+
+    When we want to modify a character that makes part of a word, we can't create an specific tag for that letter becuase it's not a good practice,
+    and also because, subequently, it will ocure erros and get dificult the code maintaining. hence, there is an option we can use to solve this issue:
+
+    - first-letter
+    - frist-line
+    - after
+    - before
+
+    .element::first-letter{color: black;}
+    .element::first-line{font-style: italic;}
+    
+    By the way, the property content, allows us to modify the value of a tag,
+        <p class="element">I say</tag>
+    .element::before{content: "hello "}
+        <p class="element">hello I say</tag>
+    .element::after{content: " to you"}
+        <p class="element">hello I say to you</tag>
+*/
+
+/*
+    Step 21: Symbol selectors (> ~ + :not) pseudo elements
+
+    When we want to modify the child element of a parent element, we can use the > symbol to limit the cascade,
+    this is useful when we only need to affect or modify the first level of the cascade. example:
+        1. div > p { color: red; }
+
+    On the other hand, the ~ selector allows us to modify all elements that are specified after the symbol
+        2. div ~ p { color: blue; }
+
+    Likewise, the + element allows us to modify the first <p> that comes after the chosen one
+        3. div + p { color: blue; }
+    last but not least, the :not selector allows us to exclude an element (using identifier by class or IDs) in order to modify all other elements that are contained by the parent
+        4. div p:not(#tittle){color:blue}
+*/
+
+/*
+    Step 22: calc() (CSS function)
+
+    When we create responsive interfaces, the size of pictures can be a problem, hence to keep the proportionality of those pictures we can use:
+    calc() check this example out:
+    - img{width: calc(40%-50px)}
+*/
+
+/* 
+    step 23: opacity (css property)
+
+    The opacity is ease of the light to gets through an object, it means that if the opcaity is 100%, we cannot see the object.
+    opacity:100; non-visible.
+    opacity: 0.3 = 30%; visible.
+
+    Additionally, opacity can be also applied to colors
+    background-color: rgba(222,122,68, (opacity level));
+
+    To conclude, we can combine opacity with transitions.
+*/
+
+/*
+    step 24: shadows (CSS property) (external and internal)
+
+    Shadows allows us to provide depth to elements, they work with 5 parameters which are::after
+    xPosition, yPosition, smooth, distance, color. We can also add more shadows by separating them with comas.
+    example:
+
+    Shadows for containers or pictures:
+        External shadows: div{box-shadow: 0 0 0 2 red;}
+        External shadows: div{box-shadow: inset 0 0 0 2 red;}
+
+    Shadows for text:
+        External shadows: p{text-shadow: 0 0 0 2 red;}
+
+    For practicing this, search in google: box shadow by mozilla, there we can test css modifications and properties
+*/
+
+/*
+    Step 25: exceptions (@media)
+
+    Exceptions is a css function that allows us to create responsives websites, to do so we can use the @media function
+    example:
+    @media screen and(max-width: 480px){
+        modifications
+    }
+
+*/
+
+/**
+    Main color: #F2ECEF
+*/
+
+strong{
+    font-weight: bold;
+}
+
+html{
+    scroll-padding-top: 95px; /* scroll-padding-top is used to avoid the problem of,
+     tags that appear behind the navbar by using jumping links */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+/* HEADER */
+header{
+    width:100%;
+    height:auto;
+    background-color: #F2ECEF;
+    position: fixed;
+}
+main{
+    padding-top: 100px;
+}
+.nav-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 0px 15px 0px;
+}
+@media (max-width: 760px) {
+    .nav-container{
+        /*content-visibility: hidden;*/
+        place-content: center;
+    }
+}
+
+/* Left section*/
+.nav-sector-tittle{
+    display: flex;
+    width: 400px;
+    place-content: space-evenly;
+    /*Animation*/
+    animation-name: tittleAnimation;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+        /* TESTER
+        border: solid 2px red; */
+}
+.icon-container{
+    display: flex;
+    place-content: center;
+    width: auto;
+        /* TESTER
+        border: so lid 1px blue; */
+}
+.icon-nav{
+    width: 60px;
+    height: 60px;
+}
+.tittle-container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-content: center;
+    justify-content: center;
+        /* TESTER
+        border: solid 1px blue; */
+}
+.tittle-nav{
+    padding: 0px 0px 2px 0px;
+    /*em means x times the default size*/
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: capitalize;
+        /*TESTER
+        border: solid 1px red;*/
+}
+.sub-tittle-nav{
+    font-size: 18px;
+    font-style: italic;
+    text-transform: capitalize;
+        /*TESTER
+        border: solid 1px red;*/
+}
+
+@keyframes tittleAnimation{
+    from{
+        transform: translateX(-450px);
+    }to{
+        transform: translateX(0px);
+    }
+}
+
+/* Right section */
+#nav-sector-menu{
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    /*ANIMATION*/
+    animation-name: menuAnimation;
+    animation-duration: 1.8s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+        /*TESTER
+        border: solid 1px blue;*/
+}
+#list-nav{
+    display: flex;
+    /*TESTER
+    border: solid 1px blue;*/
+}
+.li-nav{
+    display: grid;
+    align-content: center;
+    padding: 0px 10px 0px 10px;
+    transition: 0.2s, scale;
+        /*TESTER
+        border: solid 1px red;*/
+}
+.li-nav:hover{
+    transform: scale(1.15);
+}
+.li-nav a, .li-nav a:hover, .li-nav a:link, .li-nav a:visited{
+    color: black;
+    text-decoration: none; /* Remove default styles of a tags */
+}
+
+@keyframes menuAnimation{
+    from{
+        transform: translateX(450px);
+    }to{
+        transform: translateX(0px)
+    }
+}
+
+/* GENERAL CONTAINERS, TITTLES AND TEXT */
+.container-about-me, .container-services, .container-my-projects{
+    display: block;
+    text-transform: capitalize;
+}
+.tittle-section{
+    font-size: 60px;
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+        /* Testing
+        background-color: aqua;
+        border-style: solid;
+        border-width: 2px;*/
+}
+.text-about-me, .text-service, .text-card{
+    /*Display/Position*/
+    width: 800px;
+    box-sizing: border-box; /*box-sizing limits the with and height to the parent's size*/
+    padding: 0px 5px 0px 5px;
+    /*Text*/
+    text-align: left;
+    text-transform: none; /* Deactivate font style */
+    line-height: 26pt; /*Line-height helps you to modify the line spacing,
+    it should be worked using pt as measure*/
+        /* Testing
+        background-color: blue;
+        border-style: solid;
+        border-width: 2px; */
+}
+
+/* ABOUT ME */
+.content-about-me{
+    display: flex;
+    flex-wrap: wrap-reverse; /* It becomes responsive from flex to block*/
+    padding: 0px 10px 0px 10px;
+    place-content: center; /* Move elements horizontally*/
+    align-items: center; /* Move elements vertically*/
+        /* Testing
+        background-color: aqua;
+        border-style: solid;
+        border-width: 2px; */
+}
+.complement-about-me{
+    display: grid;
+    width: 400px;
+    height: 400px;
+    padding: 10px 10px 10px 10px;
+    box-sizing:border-box;
+    transition: 1s transform;
+        /* Testing
+        background-color: red;
+        border-style: solid;
+        border-width: 2px; */
+}
+.complement-about-me:hover{
+    transform: scale(1.1);
+}
+.complement-about-me :first-child{
+    width: 100%;
+    height: 75%;
+    object-fit: cover; /* Cuts and adjust an image according to the width and height,
+                        It's an excellent option to maintain proportions*/
+    border-radius: 200px 5px 200px 5px;
+    background-size: contain;
+}
+
+/* SERVICES */
+.content-service{
+    display: flex;
+    flex-wrap: wrap;
+    /* way 1: If we want that children respect their parent proportion,
+    we can use display: flex, flex-wrap: wrap;
+    children on the other, in order to avoid horizontal position,
+    one of them has to have 100% width*/
+    /* way 2: In the case we don't want to use flex-wrap and instead we want to use:
+    flex-direction:column; children have to have a width in percentage or being auto,
+    however, using percentage cannot be the best alternative when it's attempting to create responsive websites,
+    therefore, in order for you to use this way it's necessary using padding, text alignment or place content.
+    */
+    /* In conclusion, a good practice could be the way number two, however, the way number 1 works better and offers more flexibility,
+    useful for responsive designs*/
+    padding: 0px 10px 0px 10px;
+    place-content: center;
+    align-items: center; /* Move elements vertically*/
+    box-sizing: border-box;
+        /* Testing
+        background-color: aqua;
+        border-style: solid;
+        border-width: 2px; */
+}
+.text-service{
+    text-align: center;
+    width: 800px;
+    box-sizing: border-box;
+    list-style: circle inside;/* This property helps us to define the vignette style for <li> "list items" tags
+    the second value can be inside or outside; to keep the vignette in the same tag <div>,
+    use inside other wise outside*/
+        /* Testing
+        background-color: blue;
+        border-style: solid;
+        border-width: 2px; */
+}
+.complement-service{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    width: 100%;
+    padding: 20px 5px 5px 5px;
+    box-sizing: border-box;
+        /* Testing
+        background-color: yellow;
+        border-style: solid;
+        border-width: 2px; */
+}
+.image-container{
+    width: 100px;
+    height:auto;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: 0.5s transform, 0.5s background-color;/* We can modify the transition of any effect that is done
+    when we use a function such as: hover or etc, each property must have a time for transition, in the case
+    we want to modify all properties, we should use: 0.5s all*/
+        /* Testing
+        background-color: red;
+        border-style: solid;
+        border-width: 2px; */
+}
+.image-container:hover{
+    transform: scale(1.1);
+    background-color: #F2ECEF;
+}
+.image-container img{
+    width:100%;
+    height:auto;
+}
+
+/* PROJECTS */
+.content-my-project{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: 0px 10px 10px 10px;
+    box-sizing: border-box;
+        /* Testing
+        background-color: aqua;
+        border-style: solid;
+        border-width: 2px; */
+}
+.header-card{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding: 4px 0px 6px 0px;
+    box-sizing: border-box;
+        /* Testing
+        background-color: red;
+        border-style: solid;
+        border-width: 2px; */
+}
+.header-card h3{
+    text-align: left;
+    width: 800px;
+    font-weight: bold;
+    padding: 4px 0px 6px 0px;
+    box-sizing: border-box;
+        /* Testing
+        background-color: blue;
+        border-style: solid;
+        border-width: 2px; */
+}
+.body-card{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    box-sizing: border-box;
+        /* Testing
+        background-color: red;
+        border-style: solid;
+        border-width: 2px; */
+}
+.text-card{
+    /*Display/Position*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box; /*box-sizing limits the with and height to the parent's size*/
+    padding: 0px 5px 0px 5px;
+        /* Testing
+        background-color: red;
+        border-style: solid;
+        border-width: 2px; */
+}
+.text-card p{
+    /*Display/Position*/
+    width: 800px;
+    box-sizing: border-box; /*box-sizing limits the with and height to the parent's size*/
+    padding: 0px 5px 0px 5px;
+    /*Text*/
+    text-align: left;
+    text-transform: none; /* Deactivate font style */
+    line-height: 26pt; /*Line-height helps you to modify the line spacing,
+    it should be worked using pt as measure*/
+        /* Testing
+        background-color: blue;
+        border-style: solid;
+        border-width: 2px; */
+}
+.complement-card{
+    width:800px;
+    box-sizing: border-box;
+        /* Testing
+        background-color: blue;
+        border-style: solid;
+        border-width: 2px; */
+}
+.complement-card img{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* FOOTER */
+.container-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #737072;
+    padding: 20px 10px 20px 10px;
+}
+.footer-main-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 5px 0px 20px 5px;
+        /* Testing
+        border-style: solid;
+        border-color: red;
+        border-width: 2px; */
+}
+.footer-tittle-section{
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    box-sizing: border-box;
+    color: #FFFAFC;
+        /* Testing
+        border-style: solid;
+        border-color: deeppink;
+        border-width: 2px; */
+}
+.footer-tittle-container{
+    padding-left: 20px;
+    box-sizing: border-box;
+    /* TEST
+    border: solid 2px blue; */
+}
+.footer-copy-section{
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+    padding: 10px 0px 0px 10px;
+    color: #FFFAFC;
+    width: 100%;
+    box-sizing: border-box;
+        /* Testing
+        border-style: solid;
+        border-color: blue;
+        border-width: 2px; */
+}
+.footer-complementary-container{
+display: flex;
+justify-content:space-evenly;
+flex-wrap: wrap;
+width: 400px;
+    /* Testing
+    border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+.footer-company-section{
+    width: max-content;
+        /* Testing
+        border-style: solid;
+        border-color: blue;
+        border-width: 2px; */
+}
+.company-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-follow-me-section{
+    width: 160px;
+    text-align: center;
+        /* Testing
+        border-style: solid;
+        border-color: blue;
+        border-width: 2px; */
+}
+.company-container h5, .follow-me-container h5{
+    color: #FFFAFC;
+    padding-bottom: 0.9rem;
+}
+.company-container h3, .follow-me-container h3{
+    color: #FFFAFC;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+.follow-me-container a{
+    text-decoration: none;
+    color: #FFFAFC;
+}
+.follow-me-icons{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+        /* Testing
+        border-style: solid;
+        border-color: yellow;
+        border-width: 2px; */
+}
+.follow-me-icons img{
+    box-sizing: border-box;
+}
+.company-container img, .follow-me-icons img{
+    width: 40px;
+}
+
+
+
+
+
