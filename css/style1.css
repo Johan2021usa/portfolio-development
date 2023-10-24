@@ -333,11 +333,13 @@ html{
 }
 
 /* HEADER */
-header{
+.header-container{
     width:100%;
     height:auto;
     background-color: #F2ECEF;
     position: fixed;
+    /* Use z-index to bring to the front or send to the back an html element */
+    z-index: 1;
 }
 main{
     padding-top: 100px;
@@ -612,24 +614,26 @@ main{
 .header-card{
     display: flex;
     justify-content: center;
-    font-weight: bold;
     padding: 4px 0px 6px 0px;
     box-sizing: border-box;
+    font-weight: bold;
         /* Testing
-        background-color: red;
-        border-style: solid;
-        border-width: 2px; */
+        border: 2px solid red;*/
 }
 .header-card h3{
     text-align: left;
     width: 800px;
-    font-weight: bold;
+    color: black;
     padding: 4px 0px 6px 0px;
     box-sizing: border-box;
-        /* Testing
-        background-color: blue;
-        border-style: solid;
-        border-width: 2px; */
+    font-weight: bold;
+        /* testing
+        border: 1px solid blue;*/
+}
+.header-card a{
+    color: black;
+        /* testing
+        border: 1px solid red; */
 }
 .body-card{
     display: flex;
@@ -637,9 +641,7 @@ main{
     place-content: center;
     box-sizing: border-box;
         /* Testing
-        background-color: red;
-        border-style: solid;
-        border-width: 2px; */
+        border: 2px solid red; */
 }
 .text-card{
     /*Display/Position*/
@@ -671,6 +673,7 @@ main{
 .complement-card{
     width:800px;
     box-sizing: border-box;
+
         /* Testing
         background-color: blue;
         border-style: solid;
@@ -678,6 +681,7 @@ main{
 }
 .complement-card img{
     width: 100%;
+    border-radius: 35px 0px 35px 0px;
     box-sizing: border-box;
 }
 
