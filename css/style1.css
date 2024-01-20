@@ -523,8 +523,9 @@ main{
     height: 75%;
     object-fit: cover; /* Cuts and adjust an image according to the width and height,
                         It's an excellent option to maintain proportions*/
-    border-radius: 200px 5px 200px 5px;
+    border-radius: 6rem 1rem 6rem 2rem;
     background-size: contain;
+    background-color: #F2ECEF;
 }
 
 /* SERVICES */
