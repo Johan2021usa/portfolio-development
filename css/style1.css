@@ -326,10 +326,15 @@ strong{
 }
 
 html{
-    scroll-padding-top: 95px; /* scroll-padding-top is used to avoid the problem of,
+    scroll-padding-top: 90px; /* scroll-padding-top is used to avoid the problem of,
      tags that appear behind the navbar by using jumping links */
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+}
+@media (max-width: 760px) {
+    html{
+        scroll-padding-top: 120px;
+    }
 }
 
 /* HEADER */
@@ -341,14 +346,11 @@ html{
     /* Use z-index to bring to the front or send to the back an html element */
     z-index: 1;
 }
-main{
-    padding-top: 100px;
-}
 .nav-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 15px 0px 15px 0px;
+    box-sizing: border-box;
 }
 @media (max-width: 760px) {
     .nav-container{
@@ -360,8 +362,9 @@ main{
 /* Left section*/
 .nav-sector-tittle{
     display: flex;
-    width: 400px;
+    width: max-content;
     place-content: space-evenly;
+    margin: 1rem 0rem 0.5rem 0rem;
     /*Animation*/
     animation-name: tittleAnimation;
     animation-duration: 1s;
@@ -369,15 +372,11 @@ main{
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: none;
-        /* TESTER
-        border: solid 2px red; */
 }
 .icon-container{
     display: flex;
     place-content: center;
     width: auto;
-        /* TESTER
-        border: so lid 1px blue; */
 }
 .icon-nav{
     width: 60px;
@@ -389,8 +388,7 @@ main{
     width: auto;
     align-content: center;
     justify-content: center;
-        /* TESTER
-        border: solid 1px blue; */
+    padding-left: 20px;
 }
 .tittle-nav{
     padding: 0px 0px 2px 0px;
@@ -398,15 +396,11 @@ main{
     font-size: 26px;
     font-weight: bold;
     text-transform: capitalize;
-        /*TESTER
-        border: solid 1px red;*/
 }
 .sub-tittle-nav{
     font-size: 18px;
     font-style: italic;
     text-transform: capitalize;
-        /*TESTER
-        border: solid 1px red;*/
 }
 
 @keyframes tittleAnimation{
@@ -422,6 +416,7 @@ main{
     display: flex;
     justify-content: flex-end;
     width: auto;
+    margin: 0.5rem 0rem;
     /*ANIMATION*/
     animation-name: menuAnimation;
     animation-duration: 1.8s;
@@ -429,23 +424,19 @@ main{
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: none;
-        /*TESTER
-        border: solid 1px blue;*/
 }
 #list-nav{
     display: flex;
-    /*TESTER
-    border: solid 1px blue;*/
 }
 .li-nav{
     display: grid;
     align-content: center;
     padding: 0px 10px 0px 10px;
-    transition: 0.2s, scale;
-        /*TESTER
-        border: solid 1px red;*/
 }
-.li-nav:hover{
+.li-nav a{
+    transition: 0.2s, scale;
+}
+.li-nav a:hover{
     transform: scale(1.15);
 }
 .li-nav a, .li-nav a:hover, .li-nav a:link, .li-nav a:visited{
@@ -462,6 +453,15 @@ main{
 }
 
 /* GENERAL CONTAINERS, TITTLES AND TEXT */
+main{
+    padding-top: 90px;
+}
+@media (max-width: 760px) {
+    main{
+        padding-top: 120px;
+    }
+}
+
 .container-about-me, .container-services, .container-my-projects{
     display: block;
     text-transform: capitalize;
@@ -470,10 +470,6 @@ main{
     font-size: 60px;
     text-align: center;
     padding: 30px 0px 30px 0px;
-        /* Testing
-        background-color: aqua;
-        border-style: solid;
-        border-width: 2px;*/
 }
 .text-about-me, .text-service, .text-card{
     /*Display/Position*/
@@ -485,10 +481,6 @@ main{
     text-transform: none; /* Deactivate font style */
     line-height: 26pt; /*Line-height helps you to modify the line spacing,
     it should be worked using pt as measure*/
-        /* Testing
-        background-color: blue;
-        border-style: solid;
-        border-width: 2px; */
 }
 
 /* ABOUT ME */
@@ -498,29 +490,21 @@ main{
     padding: 0px 10px 0px 10px;
     place-content: center; /* Move elements horizontally*/
     align-items: center; /* Move elements vertically*/
-        /* Testing
-        background-color: aqua;
-        border-style: solid;
-        border-width: 2px; */
 }
 .complement-about-me{
     display: grid;
     width: 400px;
-    height: 400px;
+    height: max-content;
     padding: 10px 10px 10px 10px;
     box-sizing:border-box;
     transition: 1s transform;
-        /* Testing
-        background-color: red;
-        border-style: solid;
-        border-width: 2px; */
 }
 .complement-about-me:hover{
     transform: scale(1.1);
 }
 .complement-about-me :first-child{
     width: 100%;
-    height: 75%;
+    height: auto;
     object-fit: cover; /* Cuts and adjust an image according to the width and height,
                         It's an excellent option to maintain proportions*/
     border-radius: 6rem 1rem 6rem 2rem;
@@ -547,10 +531,6 @@ main{
     place-content: center;
     align-items: center; /* Move elements vertically*/
     box-sizing: border-box;
-        /* Testing
-        background-color: aqua;
-        border-style: solid;
-        border-width: 2px; */
 }
 .text-service{
     text-align: center;
@@ -559,10 +539,6 @@ main{
     list-style: circle inside;/* This property helps us to define the vignette style for <li> "list items" tags
     the second value can be inside or outside; to keep the vignette in the same tag <div>,
     use inside other wise outside*/
-        /* Testing
-        background-color: blue;
-        border-style: solid;
-        border-width: 2px; */
 }
 .complement-service{
     display: flex;
@@ -571,10 +547,6 @@ main{
     width: 100%;
     padding: 20px 5px 5px 5px;
     box-sizing: border-box;
-        /* Testing
-        background-color: yellow;
-        border-style: solid;
-        border-width: 2px; */
 }
 .image-container{
     width: 100px;
@@ -585,10 +557,6 @@ main{
     transition: 0.5s transform, 0.5s background-color;/* We can modify the transition of any effect that is done
     when we use a function such as: hover or etc, each property must have a time for transition, in the case
     we want to modify all properties, we should use: 0.5s all*/
-        /* Testing
-        background-color: red;
-        border-style: solid;
-        border-width: 2px; */
 }
 .image-container:hover{
     transform: scale(1.1);
@@ -607,10 +575,6 @@ main{
     justify-content: center;
     padding: 0px 10px 10px 10px;
     box-sizing: border-box;
-        /* Testing
-        background-color: aqua;
-        border-style: solid;
-        border-width: 2px; */
 }
 .header-card{
     display: flex;
@@ -618,8 +582,6 @@ main{
     padding: 4px 0px 6px 0px;
     box-sizing: border-box;
     font-weight: bold;
-        /* Testing
-        border: 2px solid red;*/
 }
 .header-card h3{
     text-align: left;
@@ -628,21 +590,15 @@ main{
     padding: 4px 0px 6px 0px;
     box-sizing: border-box;
     font-weight: bold;
-        /* testing
-        border: 1px solid blue;*/
 }
 .header-card a{
     color: black;
-        /* testing
-        border: 1px solid red; */
 }
 .body-card{
     display: flex;
     flex-wrap: wrap;
     place-content: center;
     box-sizing: border-box;
-        /* Testing
-        border: 2px solid red; */
 }
 .text-card{
     /*Display/Position*/
@@ -651,10 +607,6 @@ main{
     width: 100%;
     box-sizing: border-box; /*box-sizing limits the with and height to the parent's size*/
     padding: 0px 5px 0px 5px;
-        /* Testing
-        background-color: red;
-        border-style: solid;
-        border-width: 2px; */
 }
 .text-card p{
     /*Display/Position*/
@@ -666,19 +618,10 @@ main{
     text-transform: none; /* Deactivate font style */
     line-height: 26pt; /*Line-height helps you to modify the line spacing,
     it should be worked using pt as measure*/
-        /* Testing
-        background-color: blue;
-        border-style: solid;
-        border-width: 2px; */
 }
 .complement-card{
     width:800px;
     box-sizing: border-box;
-
-        /* Testing
-        background-color: blue;
-        border-style: solid;
-        border-width: 2px; */
 }
 .complement-card img{
     width: 100%;
@@ -693,67 +636,44 @@ main{
     justify-content: space-around;
     align-items: center;
     background-color: #737072;
-    padding: 20px 10px 20px 10px;
+    box-sizing: border-box;
 }
 .footer-main-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     height: auto;
-    justify-content: space-around;
+    width: max-content;
+    margin-top: 1rem;
     box-sizing: border-box;
-    padding: 5px 0px 20px 5px;
-        /* Testing
-        border-style: solid;
-        border-color: red;
-        border-width: 2px; */
 }
 .footer-tittle-section{
     display: flex;
     height: auto;
-    width: auto;
     align-items: center;
-    box-sizing: border-box;
     color: #FFFAFC;
-        /* Testing
-        border-style: solid;
-        border-color: deeppink;
-        border-width: 2px; */
+    box-sizing: border-box;
 }
 .footer-tittle-container{
     padding-left: 20px;
     box-sizing: border-box;
-    /* TEST
-    border: solid 2px blue; */
 }
 .footer-copy-section{
     display: flex;
     height: auto;
-    justify-content: space-around;
-    padding: 10px 0px 0px 10px;
     color: #FFFAFC;
-    width: 100%;
+    padding: 0.5rem 0rem;
     box-sizing: border-box;
-        /* Testing
-        border-style: solid;
-        border-color: blue;
-        border-width: 2px; */
+
 }
 .footer-complementary-container{
-display: flex;
-justify-content:space-evenly;
-flex-wrap: wrap;
-width: 400px;
-    /* Testing
-    border-style: solid;
-    border-color: red;
-    border-width: 2px; */
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    margin: 1rem 0rem; 
 }
 .footer-company-section{
     width: max-content;
-        /* Testing
-        border-style: solid;
-        border-color: blue;
-        border-width: 2px; */
 }
 .company-container{
     display: flex;
@@ -763,10 +683,6 @@ width: 400px;
 .footer-follow-me-section{
     width: 160px;
     text-align: center;
-        /* Testing
-        border-style: solid;
-        border-color: blue;
-        border-width: 2px; */
 }
 .company-container h5, .follow-me-container h5{
     color: #FFFAFC;
@@ -785,10 +701,6 @@ width: 400px;
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
-        /* Testing
-        border-style: solid;
-        border-color: yellow;
-        border-width: 2px; */
 }
 .follow-me-icons img{
     box-sizing: border-box;
